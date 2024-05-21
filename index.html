@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-image: url('./assets/images/background-pattern-desktop.svg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-color: lightgoldenrodyellow;
+    }
+    .card {
+      display: flex;
+      margin: 200px;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 10px;
+      height: auto;
+      width: auto;
+      padding: 20px 20px 40px 20px;
+    }
+    .heading {
+      display: flex;
+    }
+    .heading h1{
+      font-size: 40px;
+      padding-left: 5px;
+    }
+    .faq-box{
+      padding:10px 0px 10px 0px;
+    }
+    .astext{
+      background:none;
+      border:none;
+      margin:0;
+      padding:0;
+      cursor: pointer;
+      font-size: 20px;
+      padding-right: 30px;
+    }
+    .astext:hover{
+      color: purple;
+    }
+    .sub-question{
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <script src="myScript.js">
+    </script>
+</head>
+<body>
+  <div class="card">
+    <div class="heading">
+      <img src = "assets/images/icon-star.svg" alt="Test"/>
+      <h1>FAQs</h1>
+    </div>
+    <div class="faq-box">
+      <div class="sub-question">
+        <button class="astext" onclick=toggleText(5,0)>What is Frontend Mentor, and how will it help me?</button>
+        <img id="5" src = "assets/images/icon-plus.svg" onclick=toggleText(5,0) alt="Test"/>
+      </div>
+      <p id="0" style="display: none; color: gray">Frontend Mentor offers realistic coding challenges to help developers improve their 
+          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+          all levels and ideal for portfolio building.</p>
+    </div>
+    <div class="faq-box">
+      <div class="sub-question">
+        <button class="astext" onclick=toggleText(6,1)>Is Frontend Mentor free?</button>
+        <img id="6" src = "assets/images/icon-plus.svg" onclick=toggleText(6,1) alt="Test"/>
+      </div>
+        <p id="1" style="display: none; color: gray">Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+          option providing access to a range of projects suitable for all skill levels.</p>
+    </div>
+    <div class="faq-box">
+      <div class="sub-question">
+        <button class="astext" onclick=toggleText(7,2)>Can I use Frontend Mentor projects in my portfolio?</button>
+        <img id="7" src = "assets/images/icon-plus.svg" onclick=toggleText(7,2) alt="Test"/>
+      </div>
+        <p id="2" style="display: none; color: gray">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+          way to showcase your skills to potential employers!</p>
+    </div>
+    <div class="faq-box">
+      <div class="sub-question">
+        <button class="astext" onclick=toggleText(8,3)>How can I get help if I'm stuck on a Frontend Mentor challenge?</button>
+        <img id="8" src = "assets/images/icon-plus.svg" onclick=toggleText(8,3) alt="Test"/>
+      </div>    
+        <p id="3" style="display: none; color: gray">The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+          channel where you can ask questions and seek support from other community members.</p>  
+    </div>
+  </div>
+  
+</body>
+</html>
